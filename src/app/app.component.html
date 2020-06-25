@@ -1,0 +1,10 @@
+<ng-select [items]="ADUserList"
+[virtualScroll]="true"
+bindLabel="DisplayName"
+placeholder="Select User"
+(change)="onUserSelect($event)"
+[(ngModel)]="selectedUser">
+<ng-template ng-option-tmp let-item="item" let-index="index">
+{{item.DisplayName}}
+</ng-template>
+</ng-select>
